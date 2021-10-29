@@ -1,0 +1,71 @@
+*
+{
+    font-family: Calibri;
+    margin: 0;
+    color: white;
+    font-size: x-large;
+}
+body
+{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.navBar
+{
+    height: 80px;
+    background-color: rgb(62, 6, 95);
+    padding: 10px 0px 10px 10px;
+}
+.logo
+{
+    height: 80px;
+    width: 80px;
+    background-color: white;
+    float: left;
+    border-radius: 50%;
+}
+.rightBar
+{
+    height: 80px;
+    float:right;
+    display: flex;
+    align-items: center;
+}
+.upperRightOption
+{
+    padding-right: 30px;
+}
+.main
+{
+    height: -moz-calc(100.5vh - 200px); /* Firefox */
+    height: -webkit-calc(100vh - 200px); /* Chrome, Safari */
+    height: calc(100vh - 200px); /* IE9+ and future browsers */
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logInSignUp
+{
+    border: 1px solid rgb(142, 5, 194);
+}
+input
+{
+    color: black;
+}
+#submit
+{
+    background-color: rgb(142, 5, 194);
+    color:white;
+}
+footer
+{
+    margin-top: auto;
+}
+.footer
+{
+    height: 100px;
+    background-color: rgb(62, 6, 95);
+    bottom: 0;
+}
