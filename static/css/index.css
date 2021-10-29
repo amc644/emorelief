@@ -10,20 +10,34 @@ body
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+
+    height: 100%;
+    background-image: linear-gradient(120deg, rgba(0, 0, 0, 0.3) 0%,
+     rgba(0, 0, 0, 0.3) 100%), url(/static/img/home.jpg);width: 95% no-repeat center center fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover
 }
 .navBar
 {
-    height: 80px;
-    background-color: rgb(62, 6, 95);
+    height: 80px;    
+    background-color: #003d6675;
     padding: 10px 0px 10px 10px;
 }
 .logo
 {
-    height: 80px;
-    width: 80px;
+    border: none;
+    
+    /* border-radius: 50%; */
+    float: left;
+
+     height: 80px;
+    width: 190px;
+    /*
     background-color: white;
     float: left;
-    border-radius: 50%;
+    border-radius: 50%; */
 }
 .rightBar
 {
@@ -41,14 +55,23 @@ body
     height: -moz-calc(100.5vh - 200px); /* Firefox */
     height: -webkit-calc(100vh - 200px); /* Chrome, Safari */
     height: calc(100vh - 200px); /* IE9+ and future browsers */
-    background-color: black;
+    /* background-color: black; */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .logInSignUp
 {
-    border: 1px solid rgb(142, 5, 194);
+    /* border: 1px solid rgb(142, 5, 194); */
+    text-align: center;
+    width:auto;
+    backdrop-filter: blur(20px); /* efecto transparente*/
+    box-shadow: 0 10px 20px 5px rgba(255, 255, 255, 0.2);
+    margin: auto;
+    border-style:outset;
+    border-radius: 25px;
+    border-color: #165CA4;    
+    padding: 15px; 
 }
 input
 {
@@ -57,15 +80,23 @@ input
 #submit
 {
     background-color: rgb(142, 5, 194);
-    color:white;
+    color:rgb(121, 115, 115);
 }
-footer
-{
-    margin-top: auto;
+
+.control {
+    /* display: flex; */
+    align-items: center;
+    line-height: 30px;
+    /* border: 1px solid rgb(61,99,172); */
+    width: 100%;
+    list-style: none;
 }
+
 .footer
 {
     height: 100px;
-    background-color: rgb(62, 6, 95);
+    background-color: #003d6675;
     bottom: 0;
 }
+
+ 
