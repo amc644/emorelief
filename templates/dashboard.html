@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/07f8f038ea.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/dashboard.css')}}">
+    <script src="{{url_for('static',filename='js/dashboard.js')}}"></script>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div class="sideBar">
+        <a id="optionOverview" class="sideBarOption" onclick="changeOption('sideBarOption','optionOverview','content','overview');">
+            <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
+            <span class="title">Overview</span>
+        </a>
+        <a id="optionProfile" class="sideBarOption" onclick="changeOption('sideBarOption','optionProfile','content','profile');">
+            <span class="icon"><i class="fas fa-id-card"></i></span>
+            <span class="title">Profile</span>
+        </a>
+        {% block sideBar %}{% endblock %}
+        <a id="optionLogOut">
+            <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+            <span class="title">Log out</span>
+        </a>
+    </div>
+    <!--CONTAINERS-->
+
+    <!--OVERVIEW-->
+    {% block overview %}{% endblock %}
+
+    <!--PROFILE-->
+    <div id="profile" class="content" style="display: none;">
+        <h2>Name:</h2>
+        <div class="info">
+            <input class="box" type="text" placeholder="First name...">
+            <input class="box" type="text" placeholder="Middle name...">
+            <input class="box" type="text" placeholder="Last name...">
+        </div>
+        <h2>Contact:</h2>
+        <div class="info">
+            <input class="box" type="text" placeholder="Cell phone number...">
+            <input class="box" type="text" placeholder="Home phone number...">
+            <input class="box" type="text" placeholder="Work phone number...">
+            <input class="box" type="text" placeholder="E-mail...">
+        </div>
+        <h2>Address:</h2>
+        <div class="info">
+            <input class="box" type="text" placeholder="Address line 1...">
+            <input class="box" type="text" placeholder="Address line 2...">
+            <input class="box" type="text" placeholder="City...">
+            <input class="box" type="text" placeholder="State...">
+            <input class="box" type="text" placeholder="Zip code...">
+        </div>
+        <h2>Security:</h2>
+        <div class="info">
+            <input class="box" type="text" placeholder="Social Security Number...">
+            <input class="box" type="text" placeholder="Date of birth...">
+            <input class="box" type="text" placeholder="Username...">
+            <input class="box" type="password" placeholder="Password...">
+        </div>
+        <h2>Update:</h2>
+        <div class="info">
+            <button>Update</button>
+            <button>Discard</button>
+            <button>Delete account</button>
+        </div>
+    </div>
+
+    <!--MY APPOINTMENTS-->
+    {% block myAppointments %}{% endblock %}
+
+    <!--MEDICAL ADVICES-->
+    {% block advices %}{% endblock %}
+
+    <!--RATE THERAPIST-->
+    {% block rate %}{% endblock %}
+
+    <!--PAYMENT METHODS-->
+    {% block paymentMethods %}{% endblock %}
+
+    <!--SCHEDULED PATIENTS-->
+    {% block scheduledPatients %}{% endblock %}
+
+    <!--PATIENT-->
+    {% block patient %}{% endblock %}
+
+    <!--NEW USER-->
+    {% block newUser %}{% endblock %}
+
+    <!--LOAD USER-->
+    {% block loadUser %}{% endblock %}
+</body>
+</html>
