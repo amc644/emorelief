@@ -6,8 +6,9 @@ function changeOption(sideBarOption,sideBarSelectedOption,content,selectedOption
     for(var a=0;a<sideBarList.length;a++)
     {
         sideBarList[a].setAttribute("style",".sideBar a:hover{background-color: rgb(104,104,104);color:rgb(53,53,53);}'");
+        
     }
-    document.getElementById(sideBarSelectedOption).style.backgroundColor='rgb(112, 11, 151)';
+    document.getElementById(sideBarSelectedOption).style.backgroundColor='#165CA4';
 
     /* CHANGE MAIN CONTENT */
     var contents=document.getElementsByClassName(content)

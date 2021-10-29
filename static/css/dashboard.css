@@ -1,21 +1,35 @@
 *
 {
-    font-family: calibri;
     margin: 0;
-    font-size:x-large;
+    padding: 0;
+    /* box-sizing: border-box; */
+    scroll-behavior: smooth;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    letter-spacing: 0.5px;
+    font-weight: 500;
 }
 body
-{
-    background-color: black;
+{    
+    
+    background-image: linear-gradient(120deg, rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.3) 100%), url(/static/img/home.jpg);width: 95% no-repeat center center fixed;
+   background-size: cover;
+   -moz-background-size: cover;
+   -webkit-background-size: cover;
+   -o-background-size: cover;
     overflow: hidden;
 }
 .sideBar
 {
+    
     height: 100vh;
-    width: 330px;
-    background-color: rgb(62, 6, 95);
+    width: 250px;
+    background-color: #082542;
+    /* background-color:rgb(19, 175, 180); */
     float: left;
 }
+
 .sideBar a
 {
     display: block;
@@ -24,8 +38,12 @@ body
 }
 .sideBar a:hover
 {
-    background-color: rgb(142, 5, 194);
+    background-color: #165da465;
+    cursor: pointer;
 }
+
+
+
 @media screen and (max-width: 700px) {
     .sideBar{
         width: 50px;
@@ -48,16 +66,21 @@ i
 .info
 {
     color: rgb(255, 255, 255);
-    border: 3px solid rgb(112, 11, 151);
+    backdrop-filter: blur(20px);
+    border: 3px solid #165CA4;
+    /* border-color: #165CA4;   */
     display: grid;
     gap:11px;
     grid-template-columns: repeat(auto-fit,minmax(340px,1fr));
     padding: 10px;
     margin-bottom: 10px;
+    border-radius: 25px;
 }
 .box
 {
     width: 98.4%;
+    font-size: 11px;
+    font-style: italic;
 }
 button
 {
@@ -66,10 +89,11 @@ button
 /* PATIENT - SCHEDULE */
 .logo
 {
-    height: 100px;
-    width: 100px;
-    border:3px solid rgb(142, 5, 194);
-    border-radius: 50%;
+    margin: 10px 20px 15px 20px;
+    height: 90px;
+    width: 220px;
+    /* border:3px solid rgb(194, 5, 5); */
+    /* border-radius: 50%; */
 }
 
 
