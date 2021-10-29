@@ -1,0 +1,198 @@
+{% extends 'dashboard.html' %}
+{% block title %}Patient{% endblock %}
+{% block sideBar %}
+    <a id="optionAppointments" class="sideBarOption" onclick="changeOption('sideBarOption','optionAppointments','content','myAppointments');">
+        <span class="icon"><i class="fas fa-calendar-check"></i></span>
+        <span class="title">My appointments</span>
+    </a>
+    <a id="optionMedicalAdvices" class="sideBarOption" onclick="changeOption('sideBarOption','optionMedicalAdvices','content','advices');">
+        <span class="icon"><i class="fas fa-file-medical"></i></span>
+        <span class="title">Medical advices</span>
+    </a>
+    <a id="optionRate" class="sideBarOption" onclick="changeOption('sideBarOption','optionRate','content','rate');">
+        <span class="icon"><i class="fas fa-star-half-alt"></i></span>
+        <span class="title">Rate therapist</span>
+    </a>
+    <a id="optionPaymentMethods" class="sideBarOption" onclick="changeOption('sideBarOption','optionPaymentMethods','content','paymentMethods');">
+        <span class="icon"><i class="fas fa-credit-card"></i></span>
+        <span class="title">Payment methods</span>
+    </a>
+{% endblock %}
+
+<!--CONTAINERS-->
+
+<!--OVERVIEW-->
+{% block overview %}
+    <div id="overview" class="content">
+        
+    </div>
+{% endblock %}
+
+<!--PROFILE-->
+
+<!--MY APPOINTMENTS-->
+{% block myAppointments %}
+    <div id="myAppointments" class="content" style="display: none;">
+        <h2>My appointments</h2>
+        <div class="info">
+            <table id="myScheduledAppointments">
+                {% if myAppointments %}
+                    <tr>
+                        <th>Id</th>
+                        <th>Date</th>
+                        <th>Service</th>
+                        <th>Therapist</th>
+                        <th>Commands</th>
+                    </tr>
+                    {% for appointment in myAppointments%}
+                    <tr>
+                        <td>{{ appointment.id }}</td>
+                        <td>{{ appointment.date }}</td>
+                        <td>{{ appointment.service }}</td>
+                        <td>{{ appointment.therapist }}</td>
+                        <td><a>Delete</a></td>
+                    </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="5">There are no scheduled appointments</td>
+                    </tr>
+                {% endif %}
+            </table>
+        </div>
+        <h2>Schedule:</h2>
+        <div class="info">
+            <div>
+                <h2>Service:</h2>
+                <select id="services">
+                    <option value="cognitive behavioral therapy">Cognitive behavioral therapy</option>
+                    <option value="Psychodynamic therapy">Psychodynamic therapy</option>
+                    <option value="Humanistic psychotherapy">Humanistic psychotherapy</option>
+                </select>
+            </div>
+            <div>
+                <h2>Description:</h2>
+                <p>Sed quis lorem sapien. Sed lectus lorem, ornare eget aliquam ac, mattis nec lectus. Nunc sed felis massa. Etiam gravida erat a bibendum gravida.</p>
+            </div>
+        </div>
+        <div class="info">
+            <div>
+                <h2>Therapist:</h2>
+                <select id="services">
+                    <option value="cognitive behavioral therapy">Lisa Smith</option>
+                    <option value="Psychodynamic therapy">Tim Richards</option>
+                    <option value="Humanistic psychotherapy">Sarah Mills</option>
+                </select>
+            </div>
+            <div>
+                <div class="logo"></div>
+                <h2>Start rating:</h2>
+                <span>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </span>
+            </div>
+        </div>
+        <div class="info">
+            <div>
+                <h2>Date:</h2>
+                <select id="services">
+                    <option value="cognitive behavioral therapy">Saturday, January 1, 2022 - 12:00 a.m. EDT</option>
+                    <option value="Psychodynamic therapy">Saturday, January 1, 2022 - 1:00 a.m. EDT</option>
+                    <option value="Humanistic psychotherapy">Saturday, January 1, 2022 - 2:00 a.m. EDT</option>
+                </select>
+            </div>
+            <div>
+                <h2>Confirm:</h2>
+                <button>Schedule</button>
+            </div>
+        </div>
+    </div>     
+    </div>
+{% endblock %}
+
+<!--MEDICAL ADVICES-->
+{% block advices %}
+    <div id="advices" class="content" style="display: none;">
+        <h2>Therapeutic recommendations:</h2>
+        <div class="info">
+            <table id="advicesList">
+                {% if advices %}
+                    <tr>
+                        <th>Id</th>
+                        <th>Therapist</th>
+                        <th>Note</th>
+                        <th>Date</th>
+                    </tr>
+                    {% for advice in advices %}
+                    <tr>
+                        <td>{{ advice.id }}</td>
+                        <td>{{ advice.therapist }}</td>
+                        <td>{{ advice.note }}</td>
+                        <td>{{ advice.date }}</td>
+                    </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="4">There are no therapeutic recommendations.</td>
+                    </tr>
+                {% endif %}
+            </table>
+        </div>
+    </div>
+{% endblock %}
+
+<!--RATE THERAPIST-->
+{% block rate %}
+    <div id="rate" class="content" style="display: none;">
+        <h2>Rate therapists:</h2>
+        <div class="info">
+            {% if consultedTherapists %}
+                {% for therapist in consultedTherapists %}
+                <div style="border: 3px solid grey;padding:10px">
+                    <div class="logo" style="float: left;margin-right: 10px;"></div>
+                    {{ therapist.therapist }}<br>
+                    <span>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </span>
+                </div>
+                {% endfor %}
+            {% else %}
+                <p>There are no therapist for you to rate.</p>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
+
+<!--PAYMENT METHODS-->
+{% block paymentMethods %}
+    <div id="paymentMethods" class="content" style="display: none;">
+        <h2>Credit card information:</h2>
+        <div class="info">
+            <input class="box" type="text" placeholder="Credit card number...">
+            <input class="box" type="text" placeholder="Expiry date month...">
+            <input class="box" type="text" placeholder="Expiry date year...">
+            <input class="box" type="text" placeholder="CVV...">
+        </div>
+        <h2>Billing address:</h2>
+        <div class="info">
+            <input class="box" type="text" placeholder="Address line 1...">
+            <input class="box" type="text" placeholder="Address line 2...">
+            <input class="box" type="text" placeholder="City...">
+            <input class="box" type="text" placeholder="State...">
+            <input class="box" type="text" placeholder="Zip code...">
+        </div>
+        <h2>Update:</h2>
+        <div class="info">
+            <button>Update</button>
+            <button>Discard</button>
+        </div>
+    </div>
+{% endblock %}
