@@ -1,0 +1,76 @@
+*
+{
+    font-family: calibri;
+    margin: 0;
+    font-size:x-large;
+}
+body
+{
+    background-color: black;
+    overflow: hidden;
+}
+.sideBar
+{
+    height: 100vh;
+    width: 330px;
+    background-color: rgb(62, 6, 95);
+    float: left;
+}
+.sideBar a
+{
+    display: block;
+    color: white;
+    padding: 10px 0px 10px 5px;
+}
+.sideBar a:hover
+{
+    background-color: rgb(142, 5, 194);
+}
+@media screen and (max-width: 700px) {
+    .sideBar{
+        width: 50px;
+    }
+    .title{
+        display: none;
+    }
+}
+i
+{
+    width: 40px;
+}
+.content
+{
+    height: 100vh;
+    overflow: auto;
+    padding: 10px;
+    color: rgb(142, 5, 194);
+}
+.info
+{
+    color: rgb(255, 255, 255);
+    border: 3px solid rgb(112, 11, 151);
+    display: grid;
+    gap:11px;
+    grid-template-columns: repeat(auto-fit,minmax(340px,1fr));
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.box
+{
+    width: 98.4%;
+}
+button
+{
+    background-color:rgb(142, 5, 194);
+}
+/* PATIENT - SCHEDULE */
+.logo
+{
+    height: 100px;
+    width: 100px;
+    border:3px solid rgb(142, 5, 194);
+    border-radius: 50%;
+}
+
+
+/* PATIENT - MY APPOINTMENTS */
