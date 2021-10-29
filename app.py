@@ -12,7 +12,9 @@ app=Flask(__name__)
 #Usamos SECRET_KEY para que funcione flask-wtf
 app.config['SECRET_KEY']=os.urandom(32)
 
+
 #Rutas
+@app.route("/")
 @app.route("/home/")
 def wpHome():
     return render_template("home.html")
