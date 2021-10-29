@@ -1,0 +1,67 @@
+[23:27, 28/10/2021] Alex Programación: {% extends 'dashboard.html' %}
+{% block title %}Adsministrator{% endblock %}
+{% block sideBar %}
+    <a id="optionAllAppointments" class="sideBarOption" onclick="changeOption('sideBarOption','optionAllAppointments','content','');">
+        <span class="icon"><i class="fas fa-clipboard-list"></i></span>
+        <span class="title">All appointments</span>
+    </a>
+    <a id="optionNewUser" class="sideBarOption" onclick="changeOption('sideBarOption','optionNewUser','content','newUser');">
+        <span class="icon"><i class="fas fa-user-plus"></i></span>
+        <span class="title">New user</span>
+    </a>
+    <a id="optionLoad" class="sideBarOption" onclick="changeOption('sideBarOption','optionLoad','content','loadUser');">
+        <span class="icon"><i class="fas fa-user-clock"></i></span>
+        <span class="title">Load user</span>
+    </a>
+{% endblock %}
+
+<!--OVERVIEW-->
+{% block overview %}
+    <div id="overview" class="content">
+        
+    </div>
+{% endblock %}
+
+<!--PROFILE-->
+
+<!--NEW USER-->
+{% block newUser %}
+    <div id="newUser" class="content" style="display: none;">
+        
+    </div>
+{% endblock %}
+
+<!--LOAD USER-->
+{% block loadUser %}
+    <div id="loadUser" class="content" style="display: none;">
+        <h2>Load User:</h2>
+        <div class="info">
+            <table id="scheduledPatientsList">
+                {% if scheduledPatients %}
+                    <tr>
+                        <th>Id</th>
+                        <th>Date</th>
+                        <th>Patient</th>
+                        <th>Service</th>
+                        <th>Commands</th>
+                    </tr>
+                    {% for patient in scheduledPatients %}
+                    <tr>
+                        <td>{{ patient.id }}</td>
+                        <td>{{ patient.date }}</td>
+                        <td>{{ patient.patient }}</td>
+                        <td>{{ patient.service }}</td>
+                        <td>
+                            <a>Start meeting</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="5">There are no users.</td>
+                    </tr>
+                {% endif %}
+            </table>
+        </div>
+    </div>
+{% endblock %}
