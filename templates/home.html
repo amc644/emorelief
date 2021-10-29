@@ -1,0 +1,10 @@
+{% extends "index.html" %}
+{% block html %}{{super()}}{% endblock %}
+{% block title %}Home{% endblock %}
+{% block rightBar %}
+    <a class="upperRightOption" href="{{url_for('wpLogIn')}}">Log in</a>
+    <a class="upperRightOption" href="{{url_for('wpSignUp')}}">Sign up</a>
+{% endblock %}
+{% block main %}
+
+{% endblock %}
