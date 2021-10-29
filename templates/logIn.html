@@ -1,7 +1,7 @@
 {% extends "index.html" %}
 {% block html %}{{super()}}{% endblock %}
 {% block title %}Home{% endblock %}
-{% block rightBar %}
+{% block rightBar %}    
     <a class="upperRightOption" href="{{url_for('wpHome')}}">Home</a>
     <a class="upperRightOption" href="{{url_for('wpSignUp')}}">Sign up</a>
 {% endblock %}
@@ -10,7 +10,7 @@
         <h2>Log in</h2>
         <form id="logIn" method="POST" action="{{url_for('wpLogIn')}}">
             {{ wtfLogIn.csrf_token }}
-            {{ wtfLogIn.user }}
+            {{ wtfLogIn.user (class="control") }}
             {% for error in wtfLogIn.user.errors %}
                 <p style="color: red;">{{ error }}</p>
             {% endfor %}

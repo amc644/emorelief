@@ -1,10 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *
-{
-    font-family: Calibri;
+{   
     margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    scroll-behavior: smooth;
+    font-family: 'Raleway', sans-serif;
     color: white;
-    font-size: x-large;
+    letter-spacing: 1.5px;
+    font-weight: 500;
 }
+
 body
 {
     min-height: 100vh;
@@ -19,19 +25,19 @@ body
     -webkit-background-size: cover;
     -o-background-size: cover
 }
+
 .navBar
 {
     height: 80px;    
     background-color: #003d6675;
-    padding: 10px 0px 10px 10px;
+    padding: 10px 10px 10px 10px;
 }
+
 .logo
 {
-    border: none;
-    
+    border: none;    
     /* border-radius: 50%; */
     float: left;
-
      height: 80px;
     width: 190px;
     /*
@@ -39,17 +45,49 @@ body
     float: left;
     border-radius: 50%; */
 }
+
+
+
 .rightBar
 {
-    height: 80px;
+    display: flex;
+    justify-content:space-between;
+    height: 80px;   
     float:right;
     display: flex;
     align-items: center;
 }
+
 .upperRightOption
-{
-    padding-right: 30px;
+{      
+    padding: 1.2em 4em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
 }
+.upperRightOption:hover 
+{
+    background-color: #165CA4;
+    box-shadow: 0px 15px 20px rgba(214, 215, 228, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+   }
+   
+.upperRightOption:active 
+{
+    transform: translateY(-1px);
+   }
+
+
 .main
 {
     height: -moz-calc(100.5vh - 200px); /* Firefox */
@@ -60,6 +98,7 @@ body
     align-items: center;
     justify-content: center;
 }
+
 .logInSignUp
 {
     /* border: 1px solid rgb(142, 5, 194); */
@@ -73,10 +112,12 @@ body
     border-color: #165CA4;    
     padding: 15px; 
 }
+
 input
 {
     color: black;
 }
+
 #submit
 {
     background-color: rgb(142, 5, 194);
