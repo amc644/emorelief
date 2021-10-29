@@ -10,7 +10,7 @@ from forms import wtfLogIn, wtfResetPassword, wtfSendPassword, wtfSignUp
 app=Flask(__name__)
 
 #Usamos SECRET_KEY para que funcione flask-wtf
-app.config['SECRET_KEY']=os.urandom(32)
+app.config['SECRET_KEY']= os.urandom(32)
 
 
 #Rutas
