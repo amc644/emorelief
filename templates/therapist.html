@@ -1,0 +1,99 @@
+{% extends 'dashboard.html' %}
+{% block title %}Therapist{% endblock %}
+{% block sideBar %}
+    <a id="optionScheduledPatients" class="sideBarOption" onclick="changeOption('sideBarOption','optionScheduledPatients','content','scheduledPatients');">
+        <span class="icon"><i class="fas fa-calendar-alt"></i></span>
+        <span class="title">Scheduled patients</span>
+    </a>
+    <a id="optionPatient" class="sideBarOption" onclick="changeOption('sideBarOption','optionPatient','content','patient');">
+        <span class="icon"><i class="fas fa-user-injured"></i></span>
+        <span class="title">Patient</span>
+    </a>
+{% endblock %}
+
+<!--OVERVIEW-->
+{% block overview %}
+    <div id="overview" class="content">
+        
+    </div>
+{% endblock %}
+
+<!--PROFILE-->
+
+<!--SCHEDULED PATIENTS-->
+{% block scheduledPatients %}
+    <div id="scheduledPatients" class="content" style="display: none;">
+        <h2>Scheduled patients:</h2>
+        <div class="info">
+            <table id="scheduledPatientsList">
+                {% if scheduledPatients %}
+                    <tr>
+                        <th>Id</th>
+                        <th>Date</th>
+                        <th>Patient</th>
+                        <th>Service</th>
+                        <th>Commands</th>
+                    </tr>
+                    {% for patient in scheduledPatients %}
+                    <tr>
+                        <td>{{ patient.id }}</td>
+                        <td>{{ patient.date }}</td>
+                        <td>{{ patient.patient }}</td>
+                        <td>{{ patient.service }}</td>
+                        <td>
+                            <a>Start meeting</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="5">There are no scheduled patients.</td>
+                    </tr>
+                {% endif %}
+            </table>
+        </div>
+    </div>
+{% endblock %}
+
+<!--PATIENT-->
+{% block patient %}
+    <div id="patient" class="content" style="display: none;">
+        <h2>Cassandra Jones:</h2>
+        <div class="info">
+            <textarea id="note" class="box" rows="4"></textarea>
+        </div>
+        <div class="info">
+            <button>Add new note</button>
+            <button>Discard</button>
+        </div>
+        <div class="info">
+            <table id="advicesList">
+                {% if advices %}
+                    <tr>
+                        <th>Id</th>
+                        <th>Therapist</th>
+                        <th>Note</th>
+                        <th>Date</th>
+                        <th>Commands</th>
+                    </tr>
+                    {% for advice in advices %}
+                    <tr>
+                        <td>{{ advice.id }}</td>
+                        <td>{{ advice.therapist }}</td>
+                        <td>{{ advice.note }}</td>
+                        <td>{{ advice.date }}</td>
+                        <td>
+                            <a>Edit</a>
+                            <a>Delete</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="5">There are no therapeutic recommendations.</td>
+                    </tr>
+                {% endif %}
+            </table>
+        </div>
+    </div>
+{% endblock %}
