@@ -67,3 +67,8 @@ class patients():
         sql="INSERT INTO patients(fName,mName,lName,cPhone,hPhone,wPhone,email,adr1,adr2,city,state,zc,ssn,dob,usrnm,pw) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);"
         affected=db.executeSentence(sql,[self.fName,self.mName,self.lName,self.cPhone,self.hPhone,self.wPhone,self.email,self.adr1,self.adr2,self.city,self.state,self.zc,self.ssn,self.dob,self.usrnm,self.pw])
         return(affected>0)
+
+    @staticmethod
+    def lastRow():
+        sql="SELECT * FROM patients ORDER BY id;"
+        return len(db.select(sql,None))

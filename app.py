@@ -45,7 +45,14 @@ def wpSignUp():
                             )
         if newPatient.insert():
             print("SE INGRESO A LA BASE DE DATOS")
-            return render_template("patient.html")
+            lastRecord=patients.load(patients.lastRow())
+            fProfile=wtfProfile()
+            fProfile.fName.data=lastRecord.fName
+            fProfile.lName.data=lastRecord.lName
+            fProfile.email.data=lastRecord.email
+            fProfile.usrnm.data=lastRecord.usrnm
+            fProfile.pw.data=lastRecord.pw
+            return render_template("patient.html",form=fProfile)
         else:
             print("NO SE INGRESO NADA")
             return render_template("signUp.html",form=form)

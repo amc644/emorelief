@@ -23,9 +23,8 @@ def executeSentence(_sql,parameters):
             print('The connection to the database could not be established. See errors.')
             return -1
     except Error as error:
-        print('Error when executing SQL sentence'+str(error))
+        print('Error when executing SQL sentence '+str(error))
         return -1
-
 
 def dictionaryMaker(cursor,row):
     dictionary={}
