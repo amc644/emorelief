@@ -40,8 +40,11 @@
             {{ form.csrf_token }}
             <h2>Name:</h2>
             <div class="info">
+                {{ form.fName.label}}
                 {{ form.fName (class="box")}}
+                {{ form.mName.label}}
                 {{ form.mName (class="box")}}
+                {{ form.lName.label}}
                 {{ form.lName (class="box")}}
                 <!--
                 <input class="box" type="text" placeholder="First name...">
@@ -51,9 +54,13 @@
             </div>
             <h2>Contact:</h2>
             <div class="info">
+                {{ form.cPhone.label}}
                 {{ form.cPhone (class="box")}}
+                {{ form.hPhone.label}}
                 {{ form.hPhone (class="box")}}
+                {{ form.wPhone.label}}
                 {{ form.wPhone (class="box")}}
+                {{ form.email.label}}
                 {{ form.email (class="box")}}
                 <!--
                 <input class="box" type="text" placeholder="Cell phone number...">
@@ -65,11 +72,16 @@
             </div>
             <h2>Address:</h2>
             <div class="info">
+                {{ form.adr1.label}}
                 {{ form.adr1 (class="box") }}
+                {{ form.adr2.label}}
                 {{ form.adr2 (class="box") }}
+                {{ form.city.label}}
                 {{ form.city (class="box") }}
+                {{ form.state.label}}
                 {{ form.state (class="box") }}
-                {{ form.zc (class="box") }}
+                {{ form.zc.label}}
+                {{ form.zc (class="box") }}                
                 <!--
                 <input class="box" type="text" placeholder="Address line 1...">
                 <input class="box" type="text" placeholder="Address line 2...">
@@ -80,9 +92,13 @@
             </div>
             <h2>Security:</h2>
             <div class="info">
+                {{ form.ssn.label}}
                 {{ form.ssn (class="box") }}
+                {{ form.dob.label}}
                 {{ form.dob (class="box") }}
+                {{ form.usrnm.label}}
                 {{ form.usrnm (class="box") }}
+                {{ form.pw.label}}
                 {{ form.pw (class="box") }}
                 <!--
                 <input class="box" type="text" placeholder="Social Security Number...">
