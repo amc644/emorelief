@@ -68,6 +68,11 @@ class patients():
         affected=db.executeSentence(sql,[self.fName,self.mName,self.lName,self.cPhone,self.hPhone,self.wPhone,self.email,self.adr1,self.adr2,self.city,self.state,self.zc,self.ssn,self.dob,self.usrnm,self.pw])
         return(affected>0)
 
+    def update(self):
+        sql="UPDATE records SET fName=?,mName=?,lName=?,cPhone=?,hPhone=?,wPhone=?,email=?,adr1=?,adr2=?,city=?,state=?,zc=?,ssn=?,dob=?,usrnm=?,pw=? WHERE id=?;"
+        affected=db.executeSentence(sql,[self.fName,self.mName,self.lName,self.cPhone,self.hPhone,self.wPhone,self.email,self.adr1,self.adr2,self.city,self.state,self.zc,self.ssn,self.dob,self.usrnm,self.pw,self.id])
+        return(affected>0)
+
     @staticmethod
     def lastRow():
         sql="SELECT * FROM patients ORDER BY id;"

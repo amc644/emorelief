@@ -75,10 +75,29 @@ def wpResetPassword():
         return render_template("resetPassword.html",form2=form2)
     return render_template("resetPassword.html",form1=form1,form2=form2)
 
-@app.route("/patient/")
+@app.route("/patient/",methods=['GET','POST'])
 def wpPatient():
     form=wtfProfile(request.form)
+    print(request.method)
     if form.validate_on_submit():
+        lastRecord=patients.load(patients.lastRow())
+        lastRecord.fName=form.fName.data
+        lastRecord.mName=form.mName.data
+        lastRecord.lName=form.lName.data
+        lastRecord.cPhone=form.cPhone.data
+        lastRecord.hPhone=form.hPhone.data
+        lastRecord.wPhone=form.wPhone.data
+        lastRecord.email=form.email.data
+        lastRecord.adr1=form.adr1.data
+        lastRecord.adr2=form.adr2.data
+        lastRecord.city=form.city.data
+        lastRecord.state=form.state.data
+        lastRecord.zc=form.zc.data
+        lastRecord.ssn=form.ssn.data
+        lastRecord.dob=form.dob.data
+        lastRecord.usrnm=form.usrnm.data
+        lastRecord.pw=form.pw.data
+        print(lastRecord.pw)
         return render_template("patient.html",form=form)
     return render_template("patient.html",form=form)
 
