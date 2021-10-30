@@ -36,40 +36,68 @@
 
     <!--PROFILE-->
     <div id="profile" class="content">
-        <h2>Name:</h2>
-        <div class="info">
-            <input class="box" type="text" placeholder="First name...">
-            <input class="box" type="text" placeholder="Middle name...">
-            <input class="box" type="text" placeholder="Last name...">
-        </div>
-        <h2>Contact:</h2>
-        <div class="info">
-            <input class="box" type="text" placeholder="Cell phone number...">
-            <input class="box" type="text" placeholder="Home phone number...">
-            <input class="box" type="text" placeholder="Work phone number...">
-            <input class="box" type="text" placeholder="E-mail...">
-        </div>
-        <h2>Address:</h2>
-        <div class="info">
-            <input class="box" type="text" placeholder="Address line 1...">
-            <input class="box" type="text" placeholder="Address line 2...">
-            <input class="box" type="text" placeholder="City...">
-            <input class="box" type="text" placeholder="State...">
-            <input class="box" type="text" placeholder="Zip code...">
-        </div>
-        <h2>Security:</h2>
-        <div class="info">
-            <input class="box" type="text" placeholder="Social Security Number...">
-            <input class="box" type="text" placeholder="Date of birth...">
-            <input class="box" type="text" placeholder="Username...">
-            <input class="box" type="password" placeholder="Password...">
-        </div>
-        <!-- <h2>Update:</h2> -->
-        <div class="boton">
-            <button>Update</button>
-            <button>Discard</button>
-            <button>Delete account</button>
-        </div>
+        <form id="fProfile" method="POST" action="{{url_for('wpPatient')}}">
+            {{ form.csrf_token }}
+            <h2>Name:</h2>
+            <div class="info">
+                {{ form.fName }}
+                {{ form.mName }}
+                {{ form.lName }}
+                <!--
+                <input class="box" type="text" placeholder="First name...">
+                <input class="box" type="text" placeholder="Middle name...">
+                <input class="box" type="text" placeholder="Last name...">
+                -->
+            </div>
+            <h2>Contact:</h2>
+            <div class="info">
+                {{ form.cPhone }}
+                {{ form.hPhone }}
+                {{ form.wPhone }}
+                {{ form.email }}
+                <!--
+                <input class="box" type="text" placeholder="Cell phone number...">
+                <input class="box" type="text" placeholder="Home phone number...">
+                <input class="box" type="text" placeholder="Work phone number...">
+                <input class="box" type="text" placeholder="E-mail...">
+                -->
+
+            </div>
+            <h2>Address:</h2>
+            <div class="info">
+                {{ form.adr1 }}
+                {{ form.adr2 }}
+                {{ form.city }}
+                {{ form.state }}
+                {{ form.zc }}
+                <!--
+                <input class="box" type="text" placeholder="Address line 1...">
+                <input class="box" type="text" placeholder="Address line 2...">
+                <input class="box" type="text" placeholder="City...">
+                <input class="box" type="text" placeholder="State...">
+                <input class="box" type="text" placeholder="Zip code...">
+                -->
+            </div>
+            <h2>Security:</h2>
+            <div class="info">
+                {{ form.ssn }}
+                {{ form.dob }}
+                {{ form.usrnm }}
+                {{ form.pw }}
+                <!--
+                <input class="box" type="text" placeholder="Social Security Number...">
+                <input class="box" type="text" placeholder="Date of birth...">
+                <input class="box" type="text" placeholder="Username...">
+                <input class="box" type="password" placeholder="Password...">
+                -->
+            </div>
+            <!-- <h2>Update:</h2> -->
+            <div class="boton">
+                <button>Update</button>
+                <button>Discard</button>
+                <button>Delete account</button>
+            </div>
+        </form>
     </div>
 
     <!--MY APPOINTMENTS-->

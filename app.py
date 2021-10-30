@@ -4,7 +4,7 @@ import os
 #Importamos la librería Flask,
 from flask import Flask,request
 from flask.templating import render_template
-from forms import wtfLogIn, wtfResetPassword, wtfSendPassword, wtfSignUp
+from forms import wtfLogIn, wtfProfile, wtfResetPassword, wtfSendPassword, wtfSignUp
 from models import patients
 
 #Creamos un ejemplar de tipo Flask
@@ -61,7 +61,10 @@ def wpResetPassword():
 
 @app.route("/patient/")
 def wpPatient():
-    return render_template("patient.html")
+    form=wtfProfile(request.form)
+    if form.validate_on_submit():
+        return render_template("patient.html",form=form)
+    return render_template("patient.html",form=form)
 
 @app.route("/therapist/")
 def wpTherapist():
