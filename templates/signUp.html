@@ -9,33 +9,33 @@
     <div class="logInSignUp">
         <h2>Sign up</h2>
         <form id="signUp" method="POST" action="{{url_for('wpSignUp')}}">
-            {{ wtfSignUp.csrf_token }}
-            {{ wtfSignUp.firstName.label }}
-            {{ wtfSignUp.firstName }}
-            {% for error in wtfSignUp.firstName.errors %}
+            {{ form.csrf_token }}
+            {{ form.firstName.label }}
+            {{ form.firstName }}
+            {% for error in form.firstName.errors %}
                 <p style="color: red;">{{ error }}</p>
             {% endfor %}
-            {{ wtfSignUp.lastName.label }}
-            {{ wtfSignUp.lastName }}
-            {% for error in wtfSignUp.lastName.errors %}
+            {{ form.lastName.label }}
+            {{ form.lastName }}
+            {% for error in form.lastName.errors %}
                 <p style="color: red;">{{ error }}</p>
             {% endfor %}
-            {{ wtfSignUp.email.label }}
-            {{ wtfSignUp.email }}
-            {% for error in wtfSignUp.email.errors %}
+            {{ form.email.label }}
+            {{ form.email }}
+            {% for error in form.email.errors %}
                 <p style="color: red;">{{ error }}</p>
             {% endfor %}
-            {{ wtfSignUp.username.label }}
-            {{ wtfSignUp.username }}
-            {% for error in wtfSignUp.username.errors %}
+            {{ form.username.label }}
+            {{ form.username }}
+            {% for error in form.username.errors %}
                 <p style="color: red;">{{ error }}</p>
             {% endfor %}
-            {{ wtfSignUp.password.label }}
-            {{ wtfSignUp.password }}
-            {% for error in wtfSignUp.password.errors %}
+            {{ form.password.label }}
+            {{ form.password }}
+            {% for error in form.password.errors %}
                 <p style="color: red;">{{ error }}</p>
             {% endfor %}
-            {{ wtfSignUp.submit }}
+            {{ form.submit }}
         </form>
         <a href="{{url_for('wpLogIn')}}">Do you already have an account?</a>
     </div>

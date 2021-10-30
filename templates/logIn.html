@@ -9,22 +9,22 @@
     <div class="logInSignUp">
         <h2>Log in</h2>
         <form id="logIn" method="POST" action="{{url_for('wpLogIn')}}">
-            {{ wtfLogIn.csrf_token }}
-            {{ wtfLogIn.user (class="control") }}
-            {% for error in wtfLogIn.user.errors %}
+            {{ form.csrf_token }}
+            {{ form.user (class="control") }}
+            {% for error in form.user.errors %}
                 <p style="color: red;">{{ error }}</p>
             {% endfor %}
-            {{ wtfLogIn.username.label }}
-            {{ wtfLogIn.username }}
-            {% for error in wtfLogIn.username.errors %}
+            {{ form.username.label }}
+            {{ form.username }}
+            {% for error in form.username.errors %}
                 <p style="color: red;">{{ error }}</p>
             {% endfor %}
-            {{ wtfLogIn.password.label }}
-            {{ wtfLogIn.password }}
-            {% for error in wtfLogIn.password.errors %}
+            {{ form.password.label }}
+            {{ form.password }}
+            {% for error in form.password.errors %}
                 <p style="color: red;">{{ error }}</p>
             {% endfor %}
-            {{ wtfLogIn.submit }}
+            {{ form.submit }}
         </form>
         <a href="{{url_for('wpResetPassword')}}">Forgot password?</a>
         <a href="{{url_for('wpSignUp')}}">You do not have an account?</a>

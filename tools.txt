@@ -1,0 +1,19 @@
+    id
+    fName
+    mName
+    lName
+    cPhone
+    hPhone
+    wPhone
+    email
+    adr1
+    adr2
+    city
+    state
+    zc
+    ssn
+    dob
+    usrnm
+    pw
+    
+
