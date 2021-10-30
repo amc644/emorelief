@@ -60,11 +60,20 @@ def wpSignUp():
 
 @app.route("/logIn/")
 def wpLogIn():
-    return render_template("logIn.html")
+    form=wtfLogIn()
+    if form.validate_on_submit():
+        return render_template("logIn.html",form=form)
+    return render_template("logIn.html",form=form)
 
 @app.route("/resetPassword/")
 def wpResetPassword():
-    return render_template("resetPassword.html")
+    form1=wtfSendPassword()
+    if form1.validate_on_submit():
+        return render_template("resetPassword.html",form1=form1)
+    form2=wtfResetPassword()
+    if form2.validate_on_submit():
+        return render_template("resetPassword.html",form2=form2)
+    return render_template("resetPassword.html",form1=form1,form2=form2)
 
 @app.route("/patient/")
 def wpPatient():
