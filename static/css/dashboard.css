@@ -5,7 +5,6 @@
     /* box-sizing: border-box; */
     scroll-behavior: smooth;
     font-family: 'Raleway', sans-serif;
-    color: white;
     letter-spacing: 0.5px;
     font-weight: 500;
 }
@@ -42,7 +41,9 @@ body
 
 .logo
 {
-    margin: 10px 20px 15px 20px;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-bottom: 20px;
     height: 90px;
     width: 220px;
     /* border:3px solid rgb(194, 5, 5); */
@@ -65,10 +66,17 @@ h2{
 
 @media screen and (max-width: 700px) {
     .sideBar{
-        width: 50px;
+        width: 50px;        
     }
     .title{
         display: none;
+    }
+    .logo{
+        margin-left: 8px;
+        content:url(/static/img/logo.png);
+        width: 30px;
+        height: 30px;
+        /* display: none; */
     }
 }
 i
@@ -87,13 +95,13 @@ i
     
     color: rgb(255, 255, 255);
     backdrop-filter: blur(20px);
-    border: 3px solid #165CA4;
+    border: 2px solid #165da4;
     /* border-color: #165CA4;   */
     display: flex;
     flex-wrap:wrap;
     /* gap:11px; */
     /* grid-template-columns: repeat(auto-fit,minmax(340px,1fr)); */
-    padding: 5px;
+    padding: 10px;
     margin-left: 20%;
     margin-bottom: 10px;
     border-radius: 15px;
@@ -173,12 +181,72 @@ button:active
 
 /* PATIENT - MY APPOINTMENTS */
 
-/* #myAppointments h2{
-    font-size: 20px;
-    color: #FFF;
-    margin: 0 auto;
+.infoSchedule h2,
+.Therapist h2
+{
+    font-size: 15px;
+    color:#165CA4;
+    margin: 0 ;
     text-align: center;
-    font-weight: 700;    
-    text-shadow: -2px 2px 0 #165CA4;
-    letter-spacing: 1.5px;
-} */
+    font-weight: 900;    
+    text-shadow: none;
+    letter-spacing: 0.5px;
+    margin-top: -15px;
+}
+
+.infoSchedule
+{
+    color: rgb(255, 255, 255);
+    backdrop-filter: blur(20px);
+    border: 2px solid #165CA4;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-left: 20%;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    width: 58.4%;
+      
+}
+
+#services{
+    /* background-color:#165CA4; */
+    color: #082542;
+    font-style: normal;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 15px;
+    font-size: 12px;    
+}
+
+.infoSchedule p{
+    font-size: 13px; 
+    font-weight:normal; 
+    text-align: center;
+}
+
+.Therapist{
+    color: rgb(255, 255, 255);
+    backdrop-filter: blur(20px);
+    border: 2px solid #165CA4;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-left: 20%;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    width: 58.4%;
+    
+}
+.logo1
+{
+    margin-top: 5px;
+    margin-left: 85px;    
+    margin-bottom: 5px;
+    height: 60px;
+    width: 50px;
+    /* border:3px solid rgb(194, 5, 5); */
+    /* border-radius: 50%; */
+}

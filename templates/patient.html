@@ -61,8 +61,8 @@
             </table>
         </div>
         <h2>Schedule:</h2>
-        <div class="info">
-            <div>
+        <div class="infoSchedule">
+            <div class="Schedule">
                 <h2>Service:</h2>
                 <select id="services">
                     <option value="cognitive behavioral therapy">Cognitive behavioral therapy</option>
@@ -75,27 +75,25 @@
                 <p>Sed quis lorem sapien. Sed lectus lorem, ornare eget aliquam ac, mattis nec lectus. Nunc sed felis massa. Etiam gravida erat a bibendum gravida.</p>
             </div>
         </div>
-        <div class="info">
-            <div>
-                <h2>Therapist:</h2>
-                <select id="services">
-                    <option value="cognitive behavioral therapy">Lisa Smith</option>
-                    <option value="Psychodynamic therapy">Tim Richards</option>
-                    <option value="Humanistic psychotherapy">Sarah Mills</option>
-                </select>
-            </div>
-            <div>
-                <div class="logo"></div>
-                <h2>Start rating:</h2>
-                <span>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </span>
-            </div>
-        </div>
+        <div class="Therapist">            
+            <h2>Therapist:</h2>
+            <select id="services">
+                <option value="cognitive behavioral therapy">Lisa Smith</option>
+                <option value="Psychodynamic therapy">Tim Richards</option>
+                <option value="Humanistic psychotherapy">Sarah Mills</option>
+            </select>
+                <img class="logo1" src="{{ url_for('static', filename='img/therapist.png') }} ">
+                
+            <h2>Start rating:</h2>
+            <span>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </span>
+        </div>      
+        
         <div class="info">
             <div>
                 <h2>Date:</h2>
