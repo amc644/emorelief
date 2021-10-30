@@ -82,14 +82,17 @@ h2{
 i
 {
     width: 40px;
+    margin-left: 10px;
+    
 }
 .content
 {
     height: 100vh;
     overflow: auto;
-    padding: 10px;    
+    padding: 10px;        
     
 }
+
 .info
 {
     
@@ -249,4 +252,11 @@ button:active
     width: 50px;
     /* border:3px solid rgb(194, 5, 5); */
     /* border-radius: 50%; */
+}
+
+label{
+    font-size: 12px;
+    margin-left: 10px;
+    margin-bottom: -5px;
+    text-shadow: 1px 1px 0 #165CA4, 1px 1px 0 #3d3c3c;;
 }
