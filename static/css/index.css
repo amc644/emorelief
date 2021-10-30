@@ -130,12 +130,24 @@ body
 
 }
 
+#logIn{
+    height: 250px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+
 label{
     text-align: center;
     font-size: 12px;    
     /* margin-bottom: -5px; */
     text-shadow: 1px 1px 0 #165CA4, 1px 1px 0 #3d3c3c;;
 }
+
+
 
 input
 {
@@ -190,6 +202,14 @@ input
     letter-spacing: 2px;
 }
 
+.msj{
+    text-align: center;
+    font-size: 9px; 
+    margin-top: -31px;   
+    margin-bottom: 5px;
+    
+}
+
 .control {
     /* display: flex; */
     align-items: center;
@@ -199,6 +219,18 @@ input
     list-style: none;
 }
 
+.users{
+    display: grid;
+    grid-template-columns: 33% 33% 33% ;
+    grid-column:1;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    line-height: 30px;
+    /* border: 1px solid rgb(61,99,172); */
+    width: 100%;
+    list-style: none;
+}
 .footer
 {
     height: 100px;

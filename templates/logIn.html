@@ -10,7 +10,7 @@
         <h2>Log in</h2>
         <form id="logIn" method="POST" action="{{url_for('wpLogIn')}}">
             {{ form.csrf_token }}
-            {{ form.user (class="control") }}
+            {{ form.user (class="users") }}
             {% for error in form.user.errors %}
                 <p style="color: red;">{{ error }}</p>
             {% endfor %}
@@ -26,7 +26,8 @@
             {% endfor %}
             {{ form.submit }}
         </form>
-        <a href="{{url_for('wpResetPassword')}}">Forgot password?</a>
-        <a href="{{url_for('wpSignUp')}}">You do not have an account?</a>
+        <a class="msj" href="{{url_for('wpResetPassword')}}">Forgot password?</a>
+        <br>
+        <a class="msj" href="{{url_for('wpSignUp')}}">You do not have an account?</a>
     </div>
 {% endblock %}
