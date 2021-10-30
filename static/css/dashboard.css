@@ -10,8 +10,7 @@
     font-weight: 500;
 }
 body
-{    
-    
+{        
     background-image: linear-gradient(120deg, rgba(0, 0, 0, 0.3) 0%,
     rgba(0, 0, 0, 0.3) 100%), url(/static/img/home.jpg);width: 95% no-repeat center center fixed;
    background-size: cover;
@@ -21,8 +20,7 @@ body
     overflow: hidden;
 }
 .sideBar
-{
-    
+{    
     height: 100vh;
     width: 250px;
     background-color: #082542;
@@ -34,7 +32,7 @@ body
 {
     display: block;
     color: white;
-    padding: 10px 0px 10px 5px;
+    padding: 10px 0px 10px 5px;    
 }
 .sideBar a:hover
 {
@@ -42,14 +40,26 @@ body
     cursor: pointer;
 }
 
+.logo
+{
+    margin: 10px 20px 15px 20px;
+    height: 90px;
+    width: 220px;
+    /* border:3px solid rgb(194, 5, 5); */
+    /* border-radius: 50%; */
+}
+
 h2{
     text-transform: uppercase;
-    font-weight: bold;
+    /* font-weight: bold; */   
+    padding: 20px 0px 5px 0;    
     font-size: 20px;
+    color: #FFF;
+    margin: 0 auto;
     text-align: center;
-    padding: 20px 0px 5px 0;
-    
-    color:#165CA4;
+    font-weight: 700;    
+    text-shadow: 2px 1px 0 #165CA4, 2px 2px 0 #3d3c3c;;
+    letter-spacing: 2px;
 
 }
 
@@ -69,27 +79,35 @@ i
 {
     height: 100vh;
     overflow: auto;
-    padding: 10px;
-    color: rgb(142, 5, 194);
+    padding: 10px;    
+    
 }
 .info
 {
+    
     color: rgb(255, 255, 255);
     backdrop-filter: blur(20px);
     border: 3px solid #165CA4;
     /* border-color: #165CA4;   */
-    display: grid;
-    gap:11px;
-    grid-template-columns: repeat(auto-fit,minmax(340px,1fr));
-    padding: 10px;
+    display: flex;
+    flex-wrap:wrap;
+    /* gap:11px; */
+    /* grid-template-columns: repeat(auto-fit,minmax(340px,1fr)); */
+    padding: 5px;
+    margin-left: 20%;
     margin-bottom: 10px;
-    border-radius: 25px;
+    border-radius: 15px;
+    width: 58.4%;
 }
 .box
 {
     width: 98.4%;
+    margin: 3px;
     font-size: 11px;
     font-style: italic;
+    color: #082542;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 .boton
@@ -108,10 +126,9 @@ i
 }
 
 button
-{   
-      
+{         
     padding: 10px ;
-    font-size: 12px;
+    font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 2.5px;
     font-weight: 500;
@@ -119,7 +136,7 @@ button
     background-color: #fff;
     border: none;
     border-radius: 45px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 8px 15px rgba(44, 51, 78, 0.753);
     transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
@@ -137,15 +154,31 @@ button:active
     transform: translateY(-1px);
    }
 
-/* PATIENT - SCHEDULE */
-.logo
-{
-    margin: 10px 20px 15px 20px;
-    height: 90px;
-    width: 220px;
-    /* border:3px solid rgb(194, 5, 5); */
-    /* border-radius: 50%; */
+
+#services{
+    width: 98.4%;
+    font-size: 11px;
+    font-style: italic;
+    color: #082542;
 }
+
+/* PATIENT - PROFILE */
+
+
+
+/* PATIENT - SCHEDULE */
+
+
 
 
 /* PATIENT - MY APPOINTMENTS */
+
+/* #myAppointments h2{
+    font-size: 20px;
+    color: #FFF;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 700;    
+    text-shadow: -2px 2px 0 #165CA4;
+    letter-spacing: 1.5px;
+} */

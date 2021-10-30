@@ -46,8 +46,6 @@ body
     border-radius: 50%; */
 }
 
-
-
 .rightBar
 {
     display: flex;
@@ -73,6 +71,7 @@ body
     transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
+    text-decoration: none;
 }
 .upperRightOption:hover 
 {
