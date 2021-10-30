@@ -40,9 +40,9 @@
             {{ form.csrf_token }}
             <h2>Name:</h2>
             <div class="info">
-                {{ form.fName }}
-                {{ form.mName }}
-                {{ form.lName }}
+                {{ form.fName (class="box")}}
+                {{ form.mName (class="box")}}
+                {{ form.lName (class="box")}}
                 <!--
                 <input class="box" type="text" placeholder="First name...">
                 <input class="box" type="text" placeholder="Middle name...">
@@ -51,10 +51,10 @@
             </div>
             <h2>Contact:</h2>
             <div class="info">
-                {{ form.cPhone }}
-                {{ form.hPhone }}
-                {{ form.wPhone }}
-                {{ form.email }}
+                {{ form.cPhone (class="box")}}
+                {{ form.hPhone (class="box")}}
+                {{ form.wPhone (class="box")}}
+                {{ form.email (class="box")}}
                 <!--
                 <input class="box" type="text" placeholder="Cell phone number...">
                 <input class="box" type="text" placeholder="Home phone number...">
@@ -65,11 +65,11 @@
             </div>
             <h2>Address:</h2>
             <div class="info">
-                {{ form.adr1 }}
-                {{ form.adr2 }}
-                {{ form.city }}
-                {{ form.state }}
-                {{ form.zc }}
+                {{ form.adr1 (class="box") }}
+                {{ form.adr2 (class="box") }}
+                {{ form.city (class="box") }}
+                {{ form.state (class="box") }}
+                {{ form.zc (class="box") }}
                 <!--
                 <input class="box" type="text" placeholder="Address line 1...">
                 <input class="box" type="text" placeholder="Address line 2...">
@@ -80,10 +80,10 @@
             </div>
             <h2>Security:</h2>
             <div class="info">
-                {{ form.ssn }}
-                {{ form.dob }}
-                {{ form.usrnm }}
-                {{ form.pw }}
+                {{ form.ssn (class="box") }}
+                {{ form.dob (class="box") }}
+                {{ form.usrnm (class="box") }}
+                {{ form.pw (class="box") }}
                 <!--
                 <input class="box" type="text" placeholder="Social Security Number...">
                 <input class="box" type="text" placeholder="Date of birth...">
