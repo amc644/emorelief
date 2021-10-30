@@ -176,7 +176,19 @@ input
     transform: translateY(-1px);
    }
 
-
+   h2{
+    text-transform: uppercase;
+    /* font-weight: bold; */   
+    padding: 20px 0px 5px 0;    
+    font-size: 30px;
+    color: #FFF;
+    margin: 0 auto;
+    margin-bottom: -30px;
+    text-align: center;
+    font-weight: 700;    
+    text-shadow: 2px 1px 0 #165CA4, 2px 2px 0 #3d3c3c;;
+    letter-spacing: 2px;
+}
 
 .control {
     /* display: flex; */
