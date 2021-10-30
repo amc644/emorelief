@@ -46,3 +46,4 @@ class wtfProfile(FlaskForm):
     dob=DateField(render_kw={"placeholder": "Date of birth..."})
     usrnm=StringField('Username',validators=[InputRequired('Username field is required'),Length(min=1,max=30,message='Username must be 1 to 30 characters long..')], render_kw={"placeholder": "Username..."})
     pw= StringField('Password',validators=[InputRequired('The passoword field is required'),Length(min=8,max=30,message='The password must contain at least one uppercase letter, one lowercase letter, one number, and one special character.')], render_kw={"placeholder": "Password..."})
+    update=SubmitField('UPDATE')
